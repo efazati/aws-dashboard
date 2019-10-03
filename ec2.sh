@@ -1,4 +1,3 @@
-declare -a environments=("development" "staging" "production")
 for environment in "${environments[@]}"
 do
     echo "${environment}:"
