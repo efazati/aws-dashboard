@@ -11,5 +11,6 @@ do
 
 	.  "${DIR}/ec2.sh"
 	.  "${DIR}/rds.sh"
+	.  "${DIR}/ecr.sh"
 
 done
