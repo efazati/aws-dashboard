@@ -9,10 +9,10 @@ do
     printf "%60s \n" " " | tr ' ' '=' 
     echo "${environment}:"
 
-	.  "${DIR}/ec2.sh"
-	.  "${DIR}/rds.sh"
-	.  "${DIR}/ecr.sh"
-	.  "${DIR}/s3.sh"
-	.  "${DIR}/lambda.sh"
+	.  "${DIR}/services/ec2.sh"
+	.  "${DIR}/services/rds.sh"
+	.  "${DIR}/services/ecr.sh"
+	.  "${DIR}/services/s3.sh"
+	.  "${DIR}/services/lambda.sh"
 
 done
