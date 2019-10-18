@@ -13,5 +13,6 @@ do
 	.  "${DIR}/rds.sh"
 	.  "${DIR}/ecr.sh"
 	.  "${DIR}/s3.sh"
+	.  "${DIR}/lambda.sh"
 
 done
