@@ -15,8 +15,15 @@ do
 
         if  [ ! -z "$nodes" ]
         then
+            nodes_count=$(aws ec2 describe-instances \
+                --region "${region}" \
+                --filter Name=instance-state-name,Values=running  --profile "${environment}"  \
+                --query 'Reservations[].Instances[].{InstanceType:InstanceType}' \
+                | jq -r '.[].InstanceType' \
+                | wc -l)
             network_intefaces=$(aws ec2 describe-network-interfaces --profile "${environment}" --region "${region}" -- 2>&1 | jq '.NetworkInterfaces | .[] | "\(.NetworkInterfaceId) -> \(.Description)"'  | wc -l)
             echo "   ${region}"
+            echo "    * EC2 Counts: ${nodes_count}"
             echo "    * Network intefaces: ${network_intefaces}"
             echo "${nodes}"
         fi
