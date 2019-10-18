@@ -1,5 +1,10 @@
-# AWS Dashboard
+# AWS CLI Dashboard
+With this project, you can quickly see how many resources do you have cross accounts and regions. 
+You should clone the project and run the  `dashboard.sh`, and then you see everything in one sight. 
 
+
+## Installation
+Clone the project.
 Define your environments in this path ~/.aws/environments
 like this
 
@@ -52,20 +57,17 @@ EC2:
     * Network intefaces: 90
 -------------------------------------------------------------
 RDS:
-.........................................
    * By Instance Type
       5 "db.t3.medium"
    * By Engine Type
       2 "postgres"
       3 "mysql"
-.........................................
+-------------------------------------------------------------
 ECR:
-.........................................
       212 "us-west-1"
 -------------------------------------------------------------
 S3:
-.........................................
-12
+      12
 
 =============================================================
 Staging:
@@ -81,18 +83,14 @@ EC2:
     * Network intefaces: 1
 -------------------------------------------------------------
 RDS:
-.........................................
    * By Instance Type
       1 "db.t3.medium"
    * By Engine Type
       1 "postgres"
-.........................................
+-------------------------------------------------------------
 ECR:
-.........................................
       5 "us-west-1"
-
 -------------------------------------------------------------
 S3:
-.........................................
-12
+      12
 ```
