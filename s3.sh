@@ -6,4 +6,3 @@ then
     printf "%40s \n" " " | tr ' ' '.'
     echo "${buckets}"
 fi
-
