@@ -4,5 +4,12 @@ DIR="$(pwd)"
 ENV_PATH=$1
 
 . "${ENV_PATH}"
-.  "${DIR}/ec2.sh"
-.  "${DIR}/rds.sh"
+for environment in "${environments[@]}";
+do
+    printf "%60s \n" " " | tr ' ' '=' 
+    echo "${environment}:"
+
+	.  "${DIR}/ec2.sh"
+	.  "${DIR}/rds.sh"
+
+done
