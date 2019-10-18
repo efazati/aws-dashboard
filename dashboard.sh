@@ -10,6 +10,7 @@ do
     echo "${environment}:"
 
 	.  "${DIR}/services/ec2.sh"
+	.  "${DIR}/services/vpc.sh"
 	.  "${DIR}/services/rds.sh"
 	.  "${DIR}/services/ecr.sh"
 	.  "${DIR}/services/s3.sh"

@@ -2,7 +2,7 @@
 With this project, you can quickly see how many resources do you have cross accounts and regions. 
 You should clone the project and run the  `dashboard.sh`, and then you see everything in one sight. 
 
-
+<sup>VPC: In VPCs list, we remove regions that only has one vpc</sup>
 ## Installation
 Clone the project.
 Define your environments in this path ~/.aws/environments
