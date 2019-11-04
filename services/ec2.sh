@@ -1,6 +1,6 @@
 printf "%60s \n" " " | tr ' ' '-'
 echo "EC2:"
-for region in $(aws ec2 describe-instances --profile "${environment}"  2>&1 | jq '.Reservations[].Instances[].PrivateDnsName | split(".") | .[1]' | uniq | sed 's/\"//g'); \
+for region in $(aws ec2 describe-regions --profile "${environment}" --query 'Regions[].RegionName | sort(@)' --output text); \
 do 
     raw_nodes=$(aws ec2 describe-instances \
         --region "${region}" \
